@@ -303,9 +303,9 @@ commands:
              name: Upload the website
              command: |
                pip install s3cmd
-               s3cmd --access_key="${S3_ACCESS_KEY}" --secret_key="${S3_SECRET_KEY}" sync -f --delete-removed website/build/ "s3://parl.ai/"
-               s3cmd --access_key="${S3_ACCESS_KEY}" --secret_key="${S3_SECRET_KEY}" setacl --acl-public --recursive "s3://parl.ai/"
-               s3cmd --access_key="${S3_ACCESS_KEY}" --secret_key="${S3_SECRET_KEY}" modify --add-header="Content-type:text/css" 's3://parl.ai/static/css/*' 's3://parl.ai/docs/_static/*.css' 's3://parl.ai/docs/_static/css/*.css'
+               s3cmd --access_key="${S3_ACCESS_KEY}" --secret_key="${S3_SECRET_KEY}" sync -f --delete-removed website/build/ "s3://segparl.ai/"
+               s3cmd --access_key="${S3_ACCESS_KEY}" --secret_key="${S3_SECRET_KEY}" setacl --acl-public --recursive "s3://segparl.ai/"
+               s3cmd --access_key="${S3_ACCESS_KEY}" --secret_key="${S3_SECRET_KEY}" modify --add-header="Content-type:text/css" 's3://segparl.ai/static/css/*' 's3://segparl.ai/docs/_static/*.css' 's3://segparl.ai/docs/_static/css/*.css'
 
 
 # -------------------------------------------------------------------------------------
